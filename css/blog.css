@@ -1,0 +1,241 @@
+.banner{
+    padding: 151px 0 152px;
+    position: relative;
+    background-color: #eee;
+}
+.banner:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    z-index: 0;
+    bottom: -25px;
+    margin: 0 auto;
+    width: 342px;
+    height: 342px;
+    border-radius: 100%;
+    background-color: #ffffff;
+}
+.now{
+    background-color: #fff;
+    padding: 10px 23px 10px;
+    border: none;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    text-align: center;
+    color: #000 !important;
+    text-transform: capitalize;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 500;
+}
+.now:after,.now:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #fdfdfd;
+    z-index:-2;
+    border-radius: 50px;
+}
+.now:hover{
+    z-index:1;
+    color: #fdfdfd !important;
+    border-color: #e97730;
+}            
+.now:before {
+    transition: all .5s ease 0s;
+    background: #e97730;
+    z-index:-1;
+}      
+.now:hover:after,.now:hover:before {
+    width: 100%;
+    left: 0;
+}
+.banner .container{
+    text-align: center;
+}
+.banner .container .word{
+    position: relative;
+    top: 10px;
+}
+.banner .container .word h2{
+    font-size: 48px;
+    padding-bottom: 30px;
+}
+.banner .left-img{
+    position: absolute;
+    left: -375px;
+    bottom: 0;
+}
+.banner .right-img{
+    position: absolute;
+    right: -375px;
+    bottom: 0;
+}
+
+
+
+.nr{
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s;
+}
+.latest{
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+.late-title{
+    margin-bottom: 75px;
+    text-align: center;    
+    position: relative;
+}
+.late-title h2{
+    font-size: 36px;
+    font-weight: 600;
+    color: #2c2c2c;
+    margin: 0;
+    line-height: 1;
+    display: inline-block;
+}
+.late-title .line{
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    bottom: -17px;
+    width: 100px;
+    height: 2px;
+    background-color: #e97730;
+}
+.blog-wrap{
+    margin-bottom: 30px;
+}
+.blog-img{
+    position: relative;
+    margin-bottom: 25px;
+}
+.blog-img img{
+    width: 100%;
+    transition: all .4s ease 0s;
+}
+.blog-img img:hover{
+    transform: scale(1.1);
+}
+.bli{
+    overflow: hidden;
+}
+.bli a{
+    display: block;
+}
+.bld{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border: 2px solid #e2e2e2;
+    text-align: center;
+    background-color: #ffffff;
+    display: flex;
+    margin: 0;
+    bottom: -30px;
+    right: 16px;
+    z-index: 5;
+    justify-content: center;
+    
+}
+.bld h5{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #3b3b3b;
+    margin: 0;
+}
+.bld span{
+    display: block;
+}
+.blog-meta ul{
+    display: flex;
+}
+.blog-meta li{
+    text-transform: uppercase;
+    color: #777777;
+    font-weight: 500;
+    margin: 0 5px 0 0;
+}
+.blog-content h3{
+    font-size: 23px;
+    color: #4a4a4a;
+    font-weight: 500;
+    margin: 8px 0 17px;
+    line-height: 33px;
+}
+/* .blog-btn a{
+    display: inline-block;
+    color: #000000;
+    font-weight: 500;
+    line-height: 1;
+    border-bottom: 1px solid #b0b0b0;
+} */
+
+.blog-btn a{
+    font-weight: 500;
+    border: 2px solid #000000;
+    border-radius: 50px;
+    padding: 12px 25px;
+    z-index: 1;
+}
+.blog-wrap a:hover{
+    color: #e97730;
+}
+
+
+@media screen and (max-width:720px) {
+    *{
+        max-width: 100%;
+    }
+    main img{
+        width: 100%;
+    }
+    .section-border{
+        display: none;
+    }
+    .nav-top{
+        display: none;
+    }
+    .nav-bottom{
+        padding-bottom: 30px;
+    }
+    .nav-bottom .col-md-6{
+        display: none;
+    }
+
+    .nav-bottom .icon a>i{
+        margin-right: 0;
+    }
+    .nav-bottom .icon a:last-child{
+        display: inline;
+    }
+    .off-canvas-active{
+        width: 280px;
+    }
+    .off-canvas-active .off-canvas-close {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+        left: -30px;
+    }
+    main .banner .col-md-4 .banner-word{
+        top: 60px;
+    }
+    .row{
+        margin: 0;
+    }
+    .right-img img, .left-img img{
+        max-width: 80px;
+    }
+}
